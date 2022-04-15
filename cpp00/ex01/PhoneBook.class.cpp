@@ -13,17 +13,17 @@ PhoneBook::~PhoneBook(void) {
 	std::cout << "destruction" << std::endl;
 }
 
-int		set_contact( void (*set)(std::string))
-{
-	std::string tmp;
-
+//int		set_contact( void (*set)(std::string))
+//{
+//	std::string tmp;
+//
 //	std::cout << output << std::endl;
-	std::getline(std::cin, tmp);
-	if (!std::cin)
-		return (-1);
-	set(tmp);
-	return (0);
-}
+//	std::getline(std::cin, tmp);
+//	if (!std::cin)
+//		return (-1);
+//	set(tmp);
+//	return (0);
+//}
 
 Contact PhoneBook::Add_contact(void)
 {
@@ -32,36 +32,30 @@ Contact PhoneBook::Add_contact(void)
 
 	std::cout << this->index + 1 <<  "   contact :" << std::endl;
 
-	set_contact( contact.set_first_name);
-	std::cout << contact.get_first_name() << std::endl;
-//	std::cout << "First name :";
-//	std::getline(std::cin, tmp);
-//	if (!std::cin)
-//		return (-1);
-//	contact.set_first_name(tmp);
+//	set_contact("first name", contact.set_first_name);
+//	std::cout << contact.get_first_name() << std::endl;
+//	set_contact("last name", contact.set_last_name);
+//	set_contact("nickname", contact.set_first_name);
+//	set_contact("phone number" contact.set_first_name);
+//	set_contact("HIS DARKEST SECRET :", contact.set_first_name);
+	std::cout << "First name :";
+	std::getline(std::cin, tmp);
+	contact.set_first_name(tmp);
 
 	std::cout << "Last name :";
 	std::getline(std::cin, tmp);
-	if (!std::cin)
-		return (-1);
 	contact.set_last_name(tmp);
 
 	std::cout << "nickname :";
 	std::getline(std::cin, tmp);
-	if (!std::cin)
-		return (-1);
 	contact.set_nickname(tmp);
 
 	std::cout << "phone number :";
 	std::getline(std::cin, tmp);
-	if (!std::cin)
-		return (-1);
 	contact.set_phone_number(tmp);
 
 	std::cout << "HIS DARKEST SECRET :";
 	std::getline(std::cin, tmp);
-	if (!std::cin)
-		return (-1);
 	contact.set_darkest_secret(tmp);
 
 	return (contact);
