@@ -35,28 +35,26 @@ void	Contact::set_darkest_secret(std::string DarkestSecrete)
 	this->_darkest_secret = DarkestSecrete;
 }
 
-//void	Contact::set_contact(std::string FirstName, std::string LastName, std::string NickName, std::string PhoneNumber, std::string DarkestSecrete) 
-//{
- //  	this->_last_name = LastName ;
-	//	_nickname(NickName), _phone_number(PhoneNumber), _darkest_secret(DarkestSecrete) 
-
-//}
 std::string	Contact::get_first_name(void) const
 {
 	return (this->_first_name);
 }
+
 std::string	Contact::get_last_name(void) const
 {
 	return (this->_last_name);
 }
+
 std::string	Contact::get_nickname(void) const
 {
 	return (this->_nickname);
 }
+
 std::string	Contact::get_phone_number(void) const
 {
 	return (this->_phone_number);
 }
+
 std::string	Contact::get_darkest_secret(void) const
 {
 	return (this->_darkest_secret);

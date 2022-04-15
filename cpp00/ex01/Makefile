@@ -18,12 +18,12 @@ GCCF = c++ -Wall -Wextra -Werror -std=c++98
 
 ##################################  RULES  #####################################
 
-all :	$(NAME)
+all :	$(INCLUDE) $(NAME)
 
-$(NAME):	$(OBJS) #$(INCLUDE) 
+$(NAME):	$(INCLUDE) $(OBJS) 
 			$(GCCF) $(OBJS) -o $(NAME)
 
-%.o: %.c	#$(INCLUDE) 
+%.o: %.c	$(INCLUDE) 
 	${GCCF} -c $< -o $@ 
 
 ############################  CLEAN & RE & phony  ##############################

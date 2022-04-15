@@ -14,7 +14,6 @@ class Contact{
 		std::string	get_nickname(void) const;
 		std::string	get_phone_number(void) const;
 		std::string	get_darkest_secret(void) const;
-//		void		set_contact(std::string FirstName, std::string LastName, std::string nickName, std::string PhoneNumber, std::string DarkestSecret);
 		void		set_first_name(std::string first_name);
 		void		set_last_name(std::string last_name);
 		void		set_nickname(std::string nickname);
