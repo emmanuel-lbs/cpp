@@ -12,16 +12,18 @@ NAME = megaphone
 
 RM = rm -f
 
-GCCF = c++ -Wall -Wextra -Werror -std=c++98
+CC = c++
+
+GCCF = $(CC) -Wall -Wextra -Werror -std=c++98
 
 ##################################  RULES  #####################################
 
 all :	$(NAME)
 
-$(NAME):	$(OBJS) #$(INCLUDE) 
+$(NAME):	$(OBJS) 
 			$(GCCF) $(OBJS) -o $(NAME)
 
-%.o: %.c	#$(INCLUDE) 
+%.o:	%.cpp
 	${GCCF} -c $< -o $@ 
 
 ############################  CLEAN & RE & phony  ##############################

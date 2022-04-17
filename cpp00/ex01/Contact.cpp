@@ -1,6 +1,5 @@
-
 #include <iostream>
-#include "Contact.class.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(void) {
 
@@ -10,27 +9,27 @@ Contact::~Contact(void) {
 
 }
 
-void	Contact::set_first_name(std::string FirstName)
+void	Contact::set_first_name(const std::string FirstName)
 {
 	this->_first_name = FirstName;
 }
 
-void	Contact::set_last_name(std::string LastName)
+void	Contact::set_last_name(const std::string LastName)
 {
 	this->_last_name = LastName;
 }
 
-void	Contact::set_nickname(std::string NickName)
+void	Contact::set_nickname(const std::string NickName)
 {
 	this->_nickname = NickName;
 }
 
-void	Contact::set_phone_number(std::string PhoneNumber)
+void	Contact::set_phone_number(const std::string PhoneNumber)
 {
 	this->_phone_number = PhoneNumber;
 }
 
-void	Contact::set_darkest_secret(std::string DarkestSecrete)
+void	Contact::set_darkest_secret(const std::string DarkestSecrete)
 {
 	this->_darkest_secret = DarkestSecrete;
 }

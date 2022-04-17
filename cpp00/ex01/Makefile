@@ -1,8 +1,8 @@
 ##############################  SOURCE & OBJETS  ###############################
 
 SRCS =	main.cpp \
-		PhoneBook.class.cpp \
-		Contact.class.cpp
+		PhoneBook.cpp \
+		Contact.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -10,20 +10,21 @@ OBJS = $(SRCS:.cpp=.o)
 
 NAME =  Awesome_PhoneBook
 
-INCLUDE = Phonebook.class.hpp Contact.class.hpp
+INCLUDE = Phonebook.hpp Contact.hpp
 
 RM = rm -f
 
-GCCF = c++ -Wall -Wextra -Werror -std=c++98
+CC = c++
+GCCF = $(CC) -Wall -Wextra -Werror -std=c++98
 
 ##################################  RULES  #####################################
 
-all :	$(INCLUDE) $(NAME)
+all :	$(NAME)
 
 $(NAME):	$(INCLUDE) $(OBJS) 
 			$(GCCF) $(OBJS) -o $(NAME)
 
-%.o: %.c	$(INCLUDE) 
+%.o:	%.cpp $(INCLUDE) 
 	${GCCF} -c $< -o $@ 
 
 ############################  CLEAN & RE & phony  ##############################
